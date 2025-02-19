@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <title>Technical Documentation</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>Technical Documentation</h1>
+        </header>
+        <ul>
+            <li><a class="nav-link" href="#HTML_and_CSS">HTML and CSS</a></li>
+            <li><a class="nav-link" href="#JavaScript_and_Java">JavaScript and Java</a></li>
+            <li><a class="nav-link" href="#Python">Python</a></li>
+            <li><a class="nav-link" href="#C++">C++</a></li>
+            <li><a class="nav-link" href="#SQL">SQL</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="HTML_and_CSS">
+            <header>HTML and CSS</header>
+            <p>HTML and CSS section content goes here.</p>
+            <p>Another paragraph about HTML and CSS.</p>
+            <code>Some HTML code here</code>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <!-- More content... -->
+        </section>
+
+        <section class="main-section" id="JavaScript_and_Java">
+            <header>JavaScript and Java</header>
+            <p>JavaScript and Java section content goes here.</p>
+            <p>Another paragraph about JavaScript and Java.</p>
+            <code>Some JavaScript code here</code>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <!-- More content... -->
+        </section>
+
+        <section class="main-section" id="Python">
+            <header>Python</header>
+            <p>Python section content goes here.</p>
+            <p>Another paragraph about Python.</p>
+            <code>Some Python code here</code>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <!-- More content... -->
+        </section>
+
+        <section class="main-section" id="C++">
+            <header>C++</header>
+            <p>C++ section content goes here.</p>
+            <p>Another paragraph about C++.</p>
+            <code>Some C++ code here</code>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <!-- More content... -->
+        </section>
+
+        <section class="main-section" id="SQL">
+            <header>SQL</header>
+            <p>SQL section content goes here.</p>
+            <p>Another paragraph about SQL.</p>
+            <code>Some SQL code here</code>
+            <li>List item 1</li>
+            <li>List item 2</li>
+            <!-- More content... -->
+        </section>
+    </main>
+
+    <script>
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach((link) => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    window.scrollTo({
+                        top: targetSection.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
